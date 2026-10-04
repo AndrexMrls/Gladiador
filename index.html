@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gladiador | Paso a Paso, Con Actitud - Tienda de Calzado en Chinú, Córdoba</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="En Gladiador ofrecemos calzado de alta calidad, comodidad y estilo en Chinú, Córdoba. Tenis, zapatos formales, botas, casuales, sandalias y calzado infantil.">
+  <meta name="keywords" content="Gladiador, Zapatos Chinú Córdoba, Calzado Chinú, Tenis, Botas, Zapatos Formales">
+  <link rel="icon" type="image/svg+xml" href="assets/images/helmet-icon.svg">
+
+  <!-- Google Fonts: Montserrat & Caveat / Yellowtail -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#F3A812',
+            'gold-hover': '#FFB72B',
+            'dark-bg': '#0D0D0D',
+            'card-dark': '#161616',
+            'card-cream': '#FBF4E6'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            script: ['Caveat', 'Yellowtail', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0D0D0D] text-white antialiased">
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN / HEADER
+       ======================================================================== -->
+  <header class="header-glass sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 flex-shrink-0">
+            <img src="assets/images/helmet-icon.svg" alt="Gladiador Logo" class="w-full h-full object-contain filter drop-shadow">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-black tracking-wider text-[#F3A812] leading-none group-hover:text-yellow-400 transition-colors">
+              GLADIADOR
+            </span>
+            <span class="text-[0.62rem] sm:text-[0.68rem] tracking-widest text-[#E0E0E0] font-semibold mt-1">
+              PASO A PASO, CON ACTITUD
+            </span>
+          </div>
+        </a>
+
+        <!-- Navegación Escritorio -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#inicio" class="btn-nav-active text-sm">Inicio</a>
+          <a href="#productos" class="px-4 py-2 text-sm font-medium text-gray-200 hover:text-[#F3A812] transition-colors">Tienda</a>
+          <a href="#categorias" class="px-4 py-2 text-sm font-medium text-gray-200 hover:text-[#F3A812] transition-colors">Categorías</a>
+          <a href="#nosotros" class="px-4 py-2 text-sm font-medium text-gray-200 hover:text-[#F3A812] transition-colors">Nosotros</a>
+          <a href="#ubicacion" class="px-4 py-2 text-sm font-medium text-gray-200 hover:text-[#F3A812] transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Iconos de Acción (Sin carrito de compras) -->
+        <div class="flex items-center gap-3 sm:gap-4">
+          <!-- Buscador -->
+          <button id="searchBtn" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-200 hover:text-[#F3A812] hover:bg-white/5 transition-all" title="Buscar calzado">
+            <i class="fas fa-search text-lg"></i>
+          </button>
+
+          <!-- Perfil / Contacto -->
+          <a href="#nosotros" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-200 hover:text-[#F3A812] hover:bg-white/5 transition-all" title="Información de la tienda">
+            <i class="far fa-user text-lg"></i>
+          </a>
+
+          <!-- Botón Menú Móvil -->
+          <button id="mobileMenuBtn" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-gray-200 hover:text-[#F3A812] focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#111111] border-b border-white/10 px-4 pt-3 pb-6 space-y-2">
+      <a href="#inicio" class="block py-2.5 px-4 text-sm font-bold text-black bg-[#F3A812] rounded-lg">Inicio</a>
+      <a href="#productos" class="block py-2.5 px-4 text-sm font-medium text-gray-300 hover:text-[#F3A812] rounded-lg">Tienda</a>
+      <a href="#categorias" class="block py-2.5 px-4 text-sm font-medium text-gray-300 hover:text-[#F3A812] rounded-lg">Categorías</a>
+      <a href="#nosotros" class="block py-2.5 px-4 text-sm font-medium text-gray-300 hover:text-[#F3A812] rounded-lg">Nosotros</a>
+      <a href="#ubicacion" class="block py-2.5 px-4 text-sm font-medium text-gray-300 hover:text-[#F3A812] rounded-lg">Contacto</a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================
+       HERO BANNER
+       ======================================================================== -->
+  <section id="inicio" class="relative overflow-hidden bg-[#0A0A0A] border-b border-white/5 min-h-[460px] sm:min-h-[500px] flex items-center">
+    
+    <!-- Fondo Ambiental con Textura Urbana -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/images/hero-banner.jpg" alt="Gladiador Calzado" class="w-full h-full object-cover object-center opacity-30 filter brightness-75">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/90 to-transparent"></div>
+      <div class="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-[#0D0D0D]"></div>
+    </div>
+
+    <!-- Flechas de Carrusel -->
+    <button id="heroPrev" class="absolute left-1 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 hover:bg-[#F3A812] text-white hover:text-black flex items-center justify-center text-xs sm:text-base transition-all" aria-label="Anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="heroNext" class="absolute right-1 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 hover:bg-[#F3A812] text-white hover:text-black flex items-center justify-center text-xs sm:text-base transition-all" aria-label="Siguiente">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+        
+        <!-- Columna Izquierda: Logo y Textos -->
+        <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+          
+          <!-- Logo Grande en Hero -->
+          <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0">
+              <img src="assets/images/helmet-icon.svg" alt="Casco Gladiador" class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(243,168,18,0.5)]">
+            </div>
+            <div class="text-left">
+              <h1 id="heroTitle" class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-wider text-[#F3A812] uppercase leading-none">
+                GLADIADOR
+              </h1>
+              <p id="heroSubtitle" class="text-[0.62rem] sm:text-xs lg:text-sm font-bold tracking-[0.18em] text-white uppercase mt-1">
+                PASO A PASO, CON ACTITUD
+              </p>
+            </div>
+          </div>
+
+          <!-- Mensaje Principal -->
+          <p id="heroDesc" class="text-gray-300 text-xs sm:text-sm lg:text-base max-w-lg mb-5 sm:mb-6 font-medium leading-relaxed">
+            Los mejores zapatos para cada estilo, cada camino y cada aventura.
+          </p>
+
+          <!-- Botón CTA -->
+          <div class="flex items-center justify-center lg:justify-start w-full sm:w-auto">
+            <a href="#productos" class="btn-gold text-xs sm:text-sm lg:text-base px-6 py-2.5 sm:py-3 font-extrabold shadow-lg w-full sm:w-auto">
+              <i class="fas fa-shopping-bag"></i>
+              <span>Comprar ahora</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Imagen Destacada del Hero & Lema Cursivo -->
+        <div class="lg:col-span-5 relative flex flex-col items-center justify-center mt-2 lg:mt-0">
+          
+          <!-- Lema en Letra Cursiva Estilo Caligrafía -->
+          <div class="w-full text-center lg:text-right mb-2 pr-0 lg:pr-8">
+            <p id="heroTagline" class="font-script text-xl sm:text-3xl lg:text-4xl text-[#F3A812] transform -rotate-2 filter drop-shadow">
+              Más que zapatos, es tu estilo de vida
+            </p>
+          </div>
+
+          <!-- Imagen del Calzado en el Hero -->
+          <div class="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md mx-auto">
+            <img src="assets/images/hero-sneakers.jpg" alt="Tenis Gladiador" class="w-full rounded-2xl shadow-2xl filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)] border border-white/5 object-cover">
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Puntos de Paginación del Carrusel -->
+      <div id="heroDots" class="flex items-center justify-center gap-2 mt-8 z-20">
+        <!-- Generados por script.js -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECCIÓN: NUESTRAS CATEGORÍAS
+       ======================================================================== -->
+  <section id="categorias" class="py-14 sm:py-16 bg-[#FFFFFF] text-[#121212]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Título de Sección -->
+      <div class="mb-10 text-left">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#111111]">
+          Nuestras <span class="text-[#F3A812]">Categorías</span>
+        </h2>
+        <p class="text-sm sm:text-base text-gray-500 mt-1 font-medium">
+          Encuentra el par perfecto para ti
+        </p>
+      </div>
+
+      <!-- Cuadrícula de 6 Categorías -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        
+        <!-- Categoría 1: Tenis -->
+        <div class="cat-card group" data-cat="Tenis">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-tenis.png" alt="Tenis" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span>Tenis</span>
+            <div class="cat-arrow-circle">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 2: Zapatos Formales -->
+        <div class="cat-card group" data-cat="Formales">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-formales.png" alt="Zapatos Formales" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span class="text-center text-xs sm:text-sm">Zapatos Formales</span>
+            <div class="cat-arrow-circle flex-shrink-0">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 3: Botas -->
+        <div class="cat-card group" data-cat="Botas">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-botas.png" alt="Botas" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span>Botas</span>
+            <div class="cat-arrow-circle">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 4: Casuales -->
+        <div class="cat-card group" data-cat="Casuales">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-casuales.png" alt="Casuales" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span>Casuales</span>
+            <div class="cat-arrow-circle">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 5: Sandalias -->
+        <div class="cat-card group" data-cat="Sandalias">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-sandalias.png" alt="Sandalias" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span>Sandalias</span>
+            <div class="cat-arrow-circle">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoría 6: Niños -->
+        <div class="cat-card group" data-cat="Niños">
+          <div class="cat-img-wrapper">
+            <img src="assets/images/cat-ninos.png" alt="Niños" class="cat-img">
+          </div>
+          <div class="cat-pill">
+            <span>Niños</span>
+            <div class="cat-arrow-circle">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECCIÓN: PRODUCTOS DESTACADOS (SIN CARRITO DE COMPRAS)
+       ======================================================================== -->
+  <section id="productos" class="py-14 sm:py-16 bg-[#0E0E0E] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de Productos -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+        <div>
+          <h2 id="featuredTitle" class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Productos <span class="text-[#F3A812]">Destacados</span>
+          </h2>
+          <p class="text-sm sm:text-base text-gray-400 mt-1 font-medium">
+            Calidad, estilo y comodidad en un solo lugar.
+          </p>
+        </div>
+
+        <!-- Botón Ver Todos -->
+        <div>
+          <button id="viewAllProductsBtn" class="btn-gold text-xs sm:text-sm font-bold px-5 py-2.5">
+            <span>Ver todos los productos</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cuadrícula Dinámica de Productos (6 tarjetas) -->
+      <div id="productsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <!-- Renderizado dinámico desde script.js con botones "Pedir por WhatsApp" sin carrito -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECCIÓN: SOBRE NOSOTROS
+       ======================================================================== -->
+  <section id="nosotros" class="py-16 sm:py-20 bg-[#121212] relative overflow-hidden border-t border-b border-white/5">
+    
+    <!-- Luz ambiental dorada sutil -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#F3A812]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Estatua / Casco Dorado de Gladiador (Izquierda) -->
+        <div class="lg:col-span-3 flex justify-center lg:justify-start">
+          <div class="relative w-48 sm:w-56 lg:w-full max-w-[240px]">
+            <img src="assets/images/about-helmet.jpg" alt="Escultura Casco Gladiador" class="w-full rounded-2xl shadow-2xl filter drop-shadow-[0_10px_20px_rgba(243,168,18,0.25)] border border-yellow-500/20 object-cover">
+          </div>
+        </div>
+
+        <!-- Contenido Central: Sobre Nosotros -->
+        <div class="lg:col-span-6 flex flex-col items-start text-left">
+          
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="text-xs sm:text-sm font-bold tracking-widest text-[#F3A812] uppercase">
+              — SOBRE NOSOTROS
+            </span>
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 leading-snug">
+            En Gladiador, creemos que <span class="text-[#F3A812]">cada paso cuenta.</span>
+          </h3>
+
+          <p class="text-gray-300 text-sm sm:text-base font-normal leading-relaxed mb-8">
+            Somos una tienda de calzado en Chinú, Córdoba, creada para ofrecerte productos de alta calidad, comodidad y estilo. Queremos que cada par de zapatos te haga sentir seguro, fuerte y listo para conquistar tus metas.
+          </p>
+
+          <!-- 3 Columnas de Confianza y Valores (Totalmente Responsivas) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full pt-4 border-t border-white/10">
+            
+            <!-- Pilar 1 -->
+            <div class="flex items-center sm:flex-col sm:items-start gap-3 bg-white/[0.04] p-3 rounded-xl border border-white/5 sm:bg-transparent sm:border-0 sm:p-0">
+              <div class="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-[#F3A812] flex-shrink-0">
+                <i class="fas fa-shield-alt text-lg sm:text-base"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-white leading-tight">
+                Productos 100% originales
+              </span>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div class="flex items-center sm:flex-col sm:items-start gap-3 bg-white/[0.04] p-3 rounded-xl border border-white/5 sm:bg-transparent sm:border-0 sm:p-0">
+              <div class="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-[#F3A812] flex-shrink-0">
+                <i class="fas fa-shipping-fast text-lg sm:text-base"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-white leading-tight">
+                Envíos rápidos y seguros
+              </span>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div class="flex items-center sm:flex-col sm:items-start gap-3 bg-white/[0.04] p-3 rounded-xl border border-white/5 sm:bg-transparent sm:border-0 sm:p-0">
+              <div class="w-10 h-10 sm:w-8 sm:h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-[#F3A812] flex-shrink-0">
+                <i class="far fa-star text-lg sm:text-base"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-bold text-white leading-tight">
+                Excelente atención al cliente
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Insignia Amarilla / Stamp "Tu estilo, nuestra pasión" (Derecha) -->
+        <div class="lg:col-span-3 flex justify-center lg:justify-end">
+          <div class="relative w-44 sm:w-52">
+            <img src="assets/images/badge-pasion.png" alt="Tu estilo, nuestra pasión" class="w-full stamp-badge filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       SECCIÓN: ¿CÓMO LLEGAR? (LOCAL FÍSICO Y UBICACIÓN CHINÚ, CÓRDOBA)
+       ======================================================================== -->
+  <section id="ubicacion" class="py-14 sm:py-16 bg-[#F5F5F7] text-[#121212]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center">
+        
+        <!-- Columna 1: Información de Contacto y Llegada -->
+        <div class="flex flex-col items-start">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 rounded-full bg-[#F3A812] flex items-center justify-center text-black">
+              <i class="fas fa-map-marker-alt text-sm"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-[#111111]">
+              ¿Cómo llegar?
+            </h3>
+          </div>
+
+          <p class="text-sm text-gray-600 mb-6 font-medium">
+            Nos encuentras en Chinú, Córdoba.<br>Visítanos y encuentra el par perfecto.
+          </p>
+
+          <a href="https://maps.google.com/?q=9.113171143597985,-75.39495342975292" target="_blank" rel="noopener noreferrer" class="btn-gold text-xs sm:text-sm font-bold mb-6">
+            <span>Ver en Google Maps</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+
+          <div class="space-y-2 text-xs sm:text-sm font-semibold text-gray-800">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-map-pin text-[#F3A812]"></i>
+              <span>Calle 14 # 10-32, Chinú, Córdoba</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-car text-[#F3A812]"></i>
+              <span>¡Te esperamos!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna 2: Fotografía del Local Comercial -->
+        <div class="relative overflow-hidden rounded-2xl shadow-xl border border-gray-200">
+          <img src="assets/images/store-front.jpg" alt="Tienda Gladiador Chinú" class="w-full h-52 sm:h-60 object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute bottom-2 left-2 bg-black/80 backdrop-blur-sm text-white text-[0.7rem] px-2.5 py-1 rounded-md font-bold flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            Tienda Física Abierta
+          </div>
+        </div>
+
+        <!-- Columna 3: Mapa Interactivo de Chinú, Córdoba -->
+        <div class="relative overflow-hidden rounded-2xl shadow-xl border border-gray-200 h-52 sm:h-60 bg-gray-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!4v1791149259562!6m8!1m7!1sbNLosP6_2bCjW-9DKPnvEg!2m2!1d9.113171143597985!2d-75.39495342975292!3f95.29023818065455!4f-13.467200255441085!5f0.7820865974627469" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            class="w-full h-full">
+          </iframe>
+          <a href="https://maps.google.com/?q=9.113171143597985,-75.39495342975292" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 hover:bg-[#F3A812] transition-colors" title="Abrir en pantalla completa">
+            <i class="fas fa-external-link-alt text-xs"></i>
+            <span>Abrir Mapa</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       FOOTER / PIE DE PÁGINA
+       ======================================================================== -->
+  <footer class="bg-[#0A0A0A] text-white pt-12 pb-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Fila Superior del Footer -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center pb-10 border-b border-white/10">
+        
+        <!-- Logo Footer -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex-shrink-0">
+            <img src="assets/images/helmet-icon.svg" alt="Gladiador Logo" class="w-full h-full object-contain">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-black tracking-wider text-[#F3A812] leading-none">
+              GLADIADOR
+            </span>
+            <span class="text-[0.6rem] tracking-widest text-[#B0B0B0] font-semibold mt-1">
+              PASO A PASO, CON ACTITUD
+            </span>
+          </div>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="flex flex-col items-center">
+          <span class="text-xs text-gray-400 font-semibold mb-3">Síguenos en nuestras redes</span>
+          <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#F3A812] hover:text-black flex items-center justify-center text-gray-300 transition-all" title="Facebook">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#F3A812] hover:text-black flex items-center justify-center text-gray-300 transition-all" title="Instagram">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#F3A812] hover:text-black flex items-center justify-center text-gray-300 transition-all" title="TikTok">
+              <i class="fab fa-tiktok text-sm"></i>
+            </a>
+            <a href="https://wa.me/573242879256" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#25D366] hover:text-white flex items-center justify-center text-gray-300 transition-all" title="WhatsApp">
+              <i class="fab fa-whatsapp text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario Newsletter -->
+        <div class="flex flex-col items-start md:items-end w-full">
+          <span class="text-xs text-gray-400 font-semibold mb-3">Suscríbete y recibe nuestras ofertas</span>
+          <form id="newsletterForm" class="flex items-center w-full max-w-xs relative">
+            <input type="email" required placeholder="Tu correo electrónico" class="w-full bg-white text-black placeholder-gray-500 text-xs px-4 py-2.5 rounded-full pr-10 focus:outline-none focus:ring-2 focus:ring-[#F3A812]">
+            <button type="submit" class="absolute right-1 w-8 h-8 rounded-full bg-[#F3A812] text-black flex items-center justify-center hover:bg-yellow-400 transition-colors" title="Suscribirme">
+              <i class="fas fa-paper-plane text-xs"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Fila Inferior de Derechos -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <div>
+          © 2025 Gladiador. Todos los derechos reservados. | <span class="text-gray-400 font-medium">Chinú, Córdoba</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-gray-400 font-medium">
+          <div class="w-4 h-4 flex-shrink-0">
+            <img src="assets/images/helmet-icon.svg" alt="Emblema" class="w-full h-full object-contain">
+          </div>
+          <span>Calidad / Estilo / Comodidad</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       MODAL: DETALLES DE PRODUCTO Y PEDIDO POR WHATSAPP
+       ======================================================================== -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay p-4">
+    <div class="bg-[#181818] border border-white/10 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 flex items-center justify-between border-b border-white/10">
+        <h3 id="modalTitle" class="text-lg font-black text-white">Nombre del Producto</h3>
+        <button id="closeModalBtn" class="w-8 h-8 rounded-full bg-white/10 text-gray-300 hover:text-white hover:bg-white/20 flex items-center justify-center">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-6 space-y-4">
+        
+        <!-- Imagen -->
+        <div class="w-full h-48 bg-[#222222] rounded-xl flex items-center justify-center p-4">
+          <img id="modalImg" src="" alt="Calzado" class="max-h-full max-w-full object-contain filter drop-shadow-xl">
+        </div>
+
+        <!-- Info y Precio -->
+        <div class="flex items-center justify-between">
+          <span id="modalCategory" class="text-xs uppercase tracking-wider text-gray-400 font-bold">Categoría</span>
+          <span id="modalPrice" class="text-2xl font-black text-[#F3A812]">$ 0</span>
+        </div>
+
+        <!-- Descripción -->
+        <p id="modalDesc" class="text-sm text-gray-300 leading-relaxed">
+          Descripción del calzado.
+        </p>
+
+        <!-- Selector de Tallas Disponibles -->
+        <div>
+          <label class="block text-xs font-bold text-gray-300 mb-2 uppercase tracking-wider">
+            Selecciona tu Talla:
+          </label>
+          <div id="modalSizes" class="flex flex-wrap gap-2">
+            <!-- Tallas inyectadas dinámicamente -->
+          </div>
+        </div>
+
+        <!-- Beneficios Rápidos -->
+        <div class="bg-[#242424] p-3 rounded-xl flex items-center justify-around text-xs text-gray-300">
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-truck text-[#F3A812]"></i>
+            <span>Envíos a todo el país</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-[#F3A812]"></i>
+            <span>100% Original</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer con Botón de WhatsApp -->
+      <div class="p-4 sm:p-5 bg-[#121212] border-t border-white/10">
+        <button onclick="confirmModalWhatsAppOrder()" class="w-full btn-gold py-3 text-sm font-extrabold flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp text-xl text-green-900"></i>
+          <span>Pedir ahora por WhatsApp</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       MODAL: BUSCADOR EN VIVO
+       ======================================================================== -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden items-start justify-center modal-overlay p-4 pt-20">
+    <div class="bg-[#181818] border border-white/10 rounded-2xl max-w-xl w-full p-5 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <div class="flex items-center gap-3 flex-grow mr-4">
+          <i class="fas fa-search text-[#F3A812]"></i>
+          <input type="text" id="searchInput" placeholder="Buscar tenis, botas, formales, sandalias..." class="w-full bg-transparent text-white placeholder-gray-400 focus:outline-none text-base">
+        </div>
+        <button id="closeSearch" class="text-gray-400 hover:text-white">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="mt-4 max-h-80 overflow-y-auto space-y-2">
+        <p class="text-gray-500 text-center py-4 text-sm">Escribe para encontrar tu calzado favorito...</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN INFERIOR (ESTILO APP MÓVIL)
+       ======================================================================== -->
+  <nav class="mobile-bottom-nav md:hidden" aria-label="Navegación móvil">
+    <a href="#inicio" class="mobile-bottom-item active" title="Inicio">
+      <i class="fas fa-home"></i>
+      <span>Inicio</span>
+    </a>
+    <a href="#productos" class="mobile-bottom-item" title="Tienda">
+      <i class="fas fa-shoe-prints"></i>
+      <span>Tienda</span>
+    </a>
+    <a href="#categorias" class="mobile-bottom-item" title="Categorías">
+      <i class="fas fa-th-large"></i>
+      <span>Categorías</span>
+    </a>
+    <a href="#ubicacion" class="mobile-bottom-item" title="Ubicación">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Ubicación</span>
+    </a>
+    <a href="https://wa.me/573242879256?text=%C2%A1Hola%20Gladiador!%20Deseo%20hacer%20una%20consulta%20sobre%20su%20calzado." target="_blank" rel="noopener noreferrer" class="mobile-bottom-item text-[#25D366]" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span>Chat</span>
+    </a>
+  </nav>
+
+  <!-- ========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ======================================================================== -->
+  <a href="https://wa.me/573242879256?text=%C2%A1Hola%20Gladiador!%20Deseo%20hacer%20una%20consulta%20sobre%20su%20calzado." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn"
+     title="Escríbenos por WhatsApp">
+    <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
+  </a>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>

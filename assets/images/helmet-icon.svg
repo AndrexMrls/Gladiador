@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD15C"/>
+      <stop offset="50%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#D98200"/>
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E59A0F"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Spartan Crest Plume -->
+  <path d="M42 6 C50 5, 62 10, 68 18 C72 23, 74 30, 75 38 C72 36, 68 34, 63 32 C60 26, 54 20, 48 16 C45 13, 40 10, 36 9 C38 7, 40 6, 42 6 Z" fill="url(#goldGrad)" />
+  <path d="M47 8 C53 7, 63 12, 69 21 C74 27, 76 34, 76 43 C73 40, 69 38, 64 36 C61 29, 56 22, 51 17 Z" fill="url(#goldLight)" opacity="0.8" />
+  
+  <!-- Crest Segments / Ridges -->
+  <path d="M48 13 L56 22 M55 17 L62 27 M62 22 L68 33 M67 28 L72 39" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Helmet Skull Dome -->
+  <path d="M30 26 C40 22, 58 24, 64 36 C66 40, 66 46, 66 52 C63 50, 58 48, 52 48 C44 48, 36 50, 28 54 C28 42, 28 32, 30 26 Z" fill="url(#goldGrad)" />
+  
+  <!-- Forehead Visor Band -->
+  <path d="M26 38 C36 34, 52 35, 64 42 L63 46 C52 40, 36 39, 26 43 Z" fill="#FFE082" />
+
+  <!-- Eye Slit / T-Visor Dark Area -->
+  <path d="M38 52 C44 50, 52 50, 58 52 L58 57 C53 55, 45 55, 38 57 Z" fill="#121212" />
+  <path d="M47 52 L50 52 L50 72 L47 70 Z" fill="#121212" />
+
+  <!-- Cheek Protector & Jaw -->
+  <path d="M28 54 C35 51, 44 51, 46 53 L46 72 C43 71, 38 70, 34 72 C31 73, 29 76, 27 82 C24 74, 25 62, 28 54 Z" fill="url(#goldGrad)" />
+  <path d="M51 53 C53 51, 60 51, 65 54 C66 63, 65 72, 62 80 C58 75, 54 72, 51 72 Z" fill="url(#goldLight)" />
+
+  <!-- Nose Guard -->
+  <polygon points="46,52 51,52 49,68 47,68" fill="#FFE082" />
+  
+  <!-- Chin / Lower Face Accent -->
+  <path d="M34 76 C40 73, 54 73, 58 76 C55 83, 43 85, 34 76 Z" fill="#C97300" opacity="0.6" />
+</svg>

@@ -1,0 +1,512 @@
+/* ==========================================================================
+   GLADIADOR - Paso a paso, con actitud
+   Estilos Principales y Responsive Mobile Optimization
+   ========================================================================== */
+
+:root {
+  --color-primary: #F3A812;
+  --color-primary-dark: #D48E06;
+  --color-primary-light: #FFC043;
+  --color-bg-dark: #0D0D0D;
+  --color-bg-card-dark: #161616;
+  --color-bg-card-cream: #FBF4E6;
+  --color-bg-light: #F6F6F6;
+  --color-text-dark: #121212;
+  --color-text-muted: #7E7E7E;
+  --color-text-light: #FFFFFF;
+  --font-main: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', 'Yellowtail', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.5;
+  padding-bottom: 60px; /* Espacio para barra de navegación inferior móvil */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Typography Helpers */
+.font-script {
+  font-family: var(--font-script);
+}
+
+.text-gold {
+  color: var(--color-primary);
+}
+
+.bg-gold {
+  background-color: var(--color-primary);
+}
+
+.border-gold {
+  border-color: var(--color-primary);
+}
+
+/* Evitar zoom automático en inputs en iOS */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: var(--color-primary);
+  color: #000000;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.65rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(243, 168, 18, 0.25);
+  user-select: none;
+}
+
+.btn-gold:hover {
+  background-color: #ffb72b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 168, 18, 0.4);
+}
+
+.btn-gold:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-nav-active {
+  background-color: var(--color-primary);
+  color: #000000 !important;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.4rem 1.25rem;
+}
+
+/* Header */
+.header-glass {
+  background-color: rgba(13, 13, 13, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Category Cards */
+.cat-card {
+  background-color: var(--color-bg-card-cream);
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0.5rem 0.75rem 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .cat-card {
+    border-radius: 1.25rem;
+    padding: 1.25rem 0.75rem 1rem 0.75rem;
+  }
+}
+
+.cat-card:hover, .cat-card:active {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(243, 168, 18, 0.18);
+  border-color: rgba(243, 168, 18, 0.4);
+}
+
+.cat-img-wrapper {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .cat-img-wrapper {
+    height: 90px;
+  }
+}
+
+.cat-img {
+  max-height: 65px;
+  max-width: 95%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.08));
+}
+
+@media (min-width: 640px) {
+  .cat-img {
+    max-height: 85px;
+  }
+}
+
+.cat-card:hover .cat-img {
+  transform: scale(1.08);
+}
+
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #121212;
+  margin-top: 0.35rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .cat-pill {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    gap: 0.35rem;
+  }
+}
+
+.cat-arrow-circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .cat-arrow-circle {
+    width: 19px;
+    height: 19px;
+    font-size: 0.65rem;
+  }
+}
+
+.cat-card:hover .cat-arrow-circle {
+  transform: translateX(3px);
+}
+
+/* Product Cards */
+.prod-card {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ECECEC;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.prod-wishlist-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+@media (min-width: 640px) {
+  .prod-wishlist-btn {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.prod-wishlist-btn:hover {
+  transform: scale(1.1);
+  color: #e53935;
+}
+
+.prod-wishlist-btn.active {
+  color: #e53935;
+  background: #ffebee;
+}
+
+.prod-img-box {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 640px) {
+  .prod-img-box {
+    height: 140px;
+    padding: 1rem;
+  }
+}
+
+.prod-img {
+  max-height: 95px;
+  max-width: 90%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+@media (min-width: 640px) {
+  .prod-img {
+    max-height: 120px;
+  }
+}
+
+.prod-card:hover .prod-img {
+  transform: scale(1.06);
+}
+
+.prod-info {
+  padding: 0.65rem 0.65rem 0.75rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media (min-width: 640px) {
+  .prod-info {
+    padding: 0.85rem 1rem 1rem 1rem;
+  }
+}
+
+.prod-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0.1rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 640px) {
+  .prod-title {
+    font-size: 0.92rem;
+    margin-bottom: 0.15rem;
+  }
+}
+
+.prod-category {
+  font-size: 0.68rem;
+  color: #888888;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .prod-category {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.prod-price {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #121212;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .prod-price {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.prod-btn-action {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.45rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  margin-top: auto;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .prod-btn-action {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.75rem;
+    gap: 0.4rem;
+  }
+}
+
+.prod-btn-action:hover, .prod-btn-action:active {
+  background-color: #ffb72b;
+  box-shadow: 0 4px 12px rgba(243, 168, 18, 0.35);
+}
+
+/* Badge Stamp */
+.stamp-badge {
+  transform: rotate(-5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal styles */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Bottom Nav Bar for Mobile Devices */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(14, 14, 14, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 45;
+}
+
+.mobile-bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 600;
+  gap: 2px;
+  transition: color 0.2s ease;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.mobile-bottom-item i {
+  font-size: 1.15rem;
+}
+
+.mobile-bottom-item.active, .mobile-bottom-item:hover {
+  color: var(--color-primary);
+}
+
+/* Floating WhatsApp button adjustments for mobile */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 72px; /* Por encima de la barra inferior en móviles */
+  right: 16px;
+  z-index: 44;
+  background-color: #25D366;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: transform 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float-btn {
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(243, 168, 18, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(243, 168, 18, 0.6);
+  }
+}
+
+.animate-glow {
+  animation: pulseGlow 3s infinite;
+}
