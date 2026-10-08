@@ -363,7 +363,7 @@
           </h3>
 
           <p class="text-gray-300 text-sm sm:text-base font-normal leading-relaxed mb-8">
-            Somos una tienda de calzado en Chinú, Córdoba, creada para ofrecerte productos de alta calidad, comodidad y estilo. Queremos que cada par de zapatos te haga sentir seguro, fuerte y listo para conquistar tus metas.
+            Somos una fábrica familiar de calzado nacida en Chinú, Córdoba. Uniendo la experiencia de la tradición con la energía de una nueva generación, creamos productos que destacan por su comodidad, estilo y alta calidad. Nuestro mayor orgullo es trabajar juntos para ofrecerte zapatos que te hagan sentir seguro, fuerte y listo para conquistar lo que te propongas
           </p>
 
           <!-- 3 Columnas de Confianza y Valores (Totalmente Responsivas) -->
@@ -460,23 +460,36 @@
         </div>
 
         <!-- Columna 3: Mapa Interactivo de Chinú, Córdoba -->
-        <div class="relative overflow-hidden rounded-2xl shadow-xl border border-gray-200 h-52 sm:h-60 bg-gray-100">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!4v1791149259562!6m8!1m7!1sbNLosP6_2bCjW-9DKPnvEg!2m2!1d9.113171143597985!2d-75.39495342975292!3f95.29023818065455!4f-13.467200255441085!5f0.7820865974627469" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="strict-origin-when-cross-origin"
-            class="w-full h-full pointer-events-none">
-          </iframe>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=9.113171143597985%2C-75.39495342975292" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Abrir la ubicación exacta en Google Maps"></a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=9.113171143597985%2C-75.39495342975292" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 z-20 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 hover:bg-[#F3A812] transition-colors" title="Abrir en pantalla completa">
-            <i class="fas fa-external-link-alt text-xs"></i>
-            <span>Abrir Mapa</span>
-          </a>
-        </div>
+        <details class="map-disclosure rounded-2xl border border-gray-200 bg-white shadow-xl overflow-hidden">
+          <summary class="flex min-h-20 items-center justify-between gap-4 px-5 py-4 font-bold text-gray-900 transition-colors hover:bg-amber-50">
+            <span class="flex items-center gap-3">
+              <span class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#F3A812]/15 text-[#B77900]">
+                <i class="fas fa-map-marked-alt text-lg" aria-hidden="true"></i>
+              </span>
+              <span class="text-sm sm:text-base">Ver ubicación del mapa</span>
+            </span>
+            <span class="map-disclosure-arrow flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F3A812] text-black shadow-md transition-transform duration-300" aria-hidden="true">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="relative h-52 border-t border-gray-200 bg-gray-100 sm:h-60">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1791149259562!6m8!1m7!1sbNLosP6_2bCjW-9DKPnvEg!2m2!1d9.113171143597985!2d-75.39495342975292!3f95.29023818065455!4f-13.467200255441085!5f0.7820865974627469"
+              title="Mapa de la tienda Gladiador en Chinú, Córdoba"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              class="h-full w-full">
+            </iframe>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=9.113171143597985%2C-75.39495342975292" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 z-10 flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-xs font-bold text-black shadow-md transition-colors hover:bg-[#F3A812]" title="Abrir en Google Maps">
+              <i class="fas fa-external-link-alt text-xs" aria-hidden="true"></i>
+              <span>Abrir Mapa</span>
+            </a>
+          </div>
+        </details>
 
       </div>
 

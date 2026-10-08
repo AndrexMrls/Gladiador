@@ -118,6 +118,33 @@ input, select, textarea {
   padding: 0.4rem 1.25rem;
 }
 
+/* Map disclosure */
+.map-disclosure summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.map-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.map-disclosure summary:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: -3px;
+}
+
+.map-disclosure-arrow {
+  transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+.map-disclosure summary:hover .map-disclosure-arrow {
+  background-color: var(--color-primary-light);
+}
+
+.map-disclosure[open] .map-disclosure-arrow {
+  transform: rotate(180deg);
+}
+
 /* Header */
 .header-glass {
   background-color: rgba(13, 13, 13, 0.95);
