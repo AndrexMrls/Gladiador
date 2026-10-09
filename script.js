@@ -21,47 +21,124 @@ const PRODUCTS_DATA = [
   },
   {
     id: 2,
-    name: "Zapato Formal",
-    category: "Formales",
-    price: 160000,
-    priceFormatted: "$ 160.000",
-    image: "assets/images/prod-zapato-formal.png",
-    description: "Zapato de vestir confeccionado en cuero legítimo con acabado brillante. Elegancia atemporal, plantilla acolchada y máxima distinción para ocasiones especiales.",
-    sizes: [38, 39, 40, 41, 42, 43],
-    colors: ["Negro Clásico", "Café Miel"]
+    name: "Colegial Azul con Cordones",
+    category: "Colegiales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-colegial-azul-cordones.png",
+    description: "Zapato colegial azul con cordones blancos, ideal para el uniforme y las actividades de todos los días.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Azul"]
+  },
+  {
+    id: 11,
+    name: "Colegial Rojo con Hebilla",
+    category: "Colegiales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-colegial-rojo-hebilla.png",
+    description: "Zapato colegial rojo con tira y hebilla. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Rojo"]
+  },
+  {
+    id: 12,
+    name: "Colegial Rojo con Cordones",
+    category: "Colegiales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-colegial-rojo-cordones.png",
+    description: "Zapato colegial rojo con cordones blancos. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Rojo"]
+  },
+  {
+    id: 13,
+    name: "Colegial Negro con Hebilla",
+    category: "Colegiales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-colegial-negro-hebilla.png",
+    description: "Zapato colegial negro con tira y hebilla. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Negro"]
   },
   {
     id: 3,
-    name: "Bota de Trabajo",
-    category: "Botas",
-    price: 200000,
-    priceFormatted: "$ 200.000",
-    image: "assets/images/prod-bota-trabajo.png",
-    description: "Bota robusta estilo nubuck con costuras reforzadas y suela antideslizante todoterreno. Máxima protección, resistencia y confort durante toda la jornada.",
-    sizes: [38, 39, 40, 41, 42, 43, 44],
-    colors: ["Mostaza / Trigo", "Café Oscuro"]
+    name: "Mercurial Dorado / Verde",
+    category: "Mercuriales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-mercurial-dorado-verde.png",
+    description: "Modelo de fútbol en tonos dorados y verdes. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Dorado / Verde"]
   },
   {
-    id: 4,
-    name: "Tenis Casual",
+    id: 7,
+    name: "Mercurial Azul",
+    category: "Mercuriales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-mercurial-azul.png",
+    description: "Modelo de fútbol en tonos azules, negros y blancos. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Azul / Negro / Blanco"]
+  },
+  {
+    id: 8,
+    name: "Mercurial Negro / Azul",
+    category: "Mercuriales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-mercurial-negro-azul.png",
+    description: "Modelo de fútbol en tonos negros y azules. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Negro / Azul"]
+  },
+  {
+    id: 9,
+    name: "Mercurial Plata / Verde",
+    category: "Mercuriales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-mercurial-plata-verde.png",
+    description: "Modelo de fútbol en tonos plata y verdes. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Plata / Verde"]
+  },
+  {
+    id: 10,
+    name: "Mercurial Negro / Azul Estrellas",
+    category: "Mercuriales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-mercurial-negro-azul-estrellas.png",
+    description: "Modelo de fútbol negro con detalles azules y diseño de estrellas. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Negro / Azul / Blanco"]
+  },
+  {
+    id: 14,
+    name: "Tenis Casual Negro con Cordones",
     category: "Casuales",
-    price: 150000,
-    priceFormatted: "$ 150.000",
-    image: "assets/images/prod-tenis-casual.png",
-    description: "Silueta clásica urbana en blanco nítido con detalles en contraste. Versátiles, combinan con jeans, bermudas o atuendos relajados de fin de semana.",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-casual-negro-cordones.png",
+    description: "Tenis casual negro con cordones y acabado clásico. Consulta por WhatsApp el precio y las tallas disponibles.",
     sizes: [36, 37, 38, 39, 40, 41, 42],
-    colors: ["Blanco / Franjas Negras", "Blanco Total"]
+    colors: ["Negro"]
   },
   {
-    id: 5,
-    name: "Sandalia Urbana",
-    category: "Sandalias",
-    price: 90000,
-    priceFormatted: "$ 90.000",
-    image: "assets/images/prod-sandalia-urbana.png",
-    description: "Sandalias ajustables con correas ergonómicas y suela texturizada antifatiga. Frescura total y soporte para climas cálidos y paseos casuales.",
-    sizes: [38, 39, 40, 41, 42],
-    colors: ["Negro / Amarillo", "Negro Total"]
+    id: 15,
+    name: "Tenis Casual Negro Urbano",
+    category: "Casuales",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-casual-negro-urbano.png",
+    description: "Tenis casual negro de estilo urbano con cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [36, 37, 38, 39, 40, 41, 42],
+    colors: ["Negro"]
   },
   {
     id: 6,
@@ -87,20 +164,20 @@ const HERO_SLIDES = [
     cta: "Explorar Colección"
   },
   {
-    title: "NUEVA LÍNEA",
-    subtitle: "CALZADO FORMAL & CUERO",
-    desc: "Elegancia, presencia y distinción con materiales seleccionados de la más alta calidad.",
-    tagline: "Presencia que impone respeto",
+    title: "COLEGIALES",
+    subtitle: "LISTOS PARA CADA DÍA",
+    desc: "Calzado clásico para acompañar el uniforme y la jornada escolar.",
+    tagline: "Comodidad para aprender y avanzar",
     image: "assets/images/prod-zapato-formal.png",
-    cta: "Ver Zapatos Formales"
+    cta: "Ver Colegiales"
   },
   {
-    title: "BOTAS Y RESISTENCIA",
-    subtitle: "PREPARADO PARA TODO RETO",
-    desc: "Suelas con tracción superior y confort garantizado para terrenos exigentes.",
-    tagline: "Firmeza en cada paso",
-    image: "assets/images/prod-bota-trabajo.png",
-    cta: "Ver Botas"
+    title: "MERCURIALES",
+    subtitle: "LISTO PARA CADA JUGADA",
+    desc: "Calzado deportivo para acompañarte en la cancha con comodidad y estabilidad.",
+    tagline: "Domina cada jugada",
+    image: "assets/images/prod-mercurial-dorado-verde.png",
+    cta: "Ver Mercuriales"
   }
 ];
 
