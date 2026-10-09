@@ -5,6 +5,11 @@
 
 // Teléfono de WhatsApp de la tienda (Oficial Gladiador: +57 324 287 9256)
 const WHATSAPP_STORE_PHONE = "573242879256"; 
+const ASSET_VERSION = "20261009-1";
+
+function versionedAssetUrl(path) {
+  return `${path}?v=${ASSET_VERSION}`;
+}
 
 // Base de datos de productos destacados
 const PRODUCTS_DATA = [
@@ -322,7 +327,7 @@ function initProductsGrid(products) {
 
         <!-- Product Image Container -->
         <div class="prod-img-box cursor-pointer" onclick="openProductModal(${prod.id})">
-          <img src="${prod.image}" alt="${prod.name}" class="prod-img" loading="lazy">
+          <img src="${versionedAssetUrl(prod.image)}" alt="${prod.name}" class="prod-img" loading="lazy">
         </div>
 
         <!-- Product Info -->
@@ -432,7 +437,7 @@ window.openProductModal = function(id) {
   const modalDesc = document.getElementById('modalDesc');
   const sizesContainer = document.getElementById('modalSizes');
 
-  if (modalImg) modalImg.src = prod.image;
+  if (modalImg) modalImg.src = versionedAssetUrl(prod.image);
   if (modalTitle) modalTitle.innerText = prod.name;
   if (modalCategory) modalCategory.innerText = `Categoría: ${prod.category}`;
   if (modalPrice) modalPrice.innerText = prod.priceFormatted;
@@ -579,7 +584,7 @@ function renderSearchResults(results) {
     <div class="flex items-center justify-between p-3 rounded-lg hover:bg-neutral-800 cursor-pointer transition-colors"
          onclick="openProductModal(${p.id}); document.getElementById('searchModal').classList.add('hidden');">
       <div class="flex items-center gap-3">
-        <img src="${p.image}" alt="${p.name}" class="w-12 h-12 object-contain bg-neutral-900 rounded p-1">
+        <img src="${versionedAssetUrl(p.image)}" alt="${p.name}" class="w-12 h-12 object-contain bg-neutral-900 rounded p-1">
         <div>
           <h4 class="font-bold text-white text-sm">${p.name}</h4>
           <span class="text-xs text-gray-400">${p.category}</span>
