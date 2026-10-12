@@ -30,17 +30,23 @@ html {
   font-family: var(--font-main);
   background-color: var(--color-bg-dark);
   color: var(--color-text-light);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   overflow-x: hidden;
   line-height: 1.5;
-  padding-bottom: 60px; /* Espacio para barra de navegación inferior móvil */
+  padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   body {
     padding-bottom: 0;
+  }
+
+  .mobile-bottom-nav {
+    display: none !important;
   }
 }
 
@@ -512,7 +518,8 @@ input, select, textarea {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: calc(60px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   background-color: rgba(14, 14, 14, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -549,7 +556,7 @@ input, select, textarea {
 /* Floating WhatsApp button adjustments for mobile */
 .whatsapp-float-btn {
   position: fixed;
-  bottom: 72px; /* Por encima de la barra inferior en móviles */
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   right: 16px;
   z-index: 44;
   background-color: #25D366;
@@ -577,6 +584,36 @@ input, select, textarea {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .header-glass nav {
+    display: none !important;
+  }
+
+  #mobileMenuBtn {
+    display: flex !important;
+  }
+
+  #mobileMenu {
+    display: none !important;
+  }
+
+  #mobileMenu:not(.hidden) {
+    display: block !important;
+  }
+
+  .mobile-bottom-nav {
+    display: flex !important;
+  }
+
+  .whatsapp-float-btn {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 /* Animations */
 @keyframes pulseGlow {
   0%, 100% {
@@ -589,4 +626,118 @@ input, select, textarea {
 
 .animate-glow {
   animation: pulseGlow 3s infinite;
+}
+
+@media (max-width: 639px) {
+  .header-glass > div > div {
+    height: 4.25rem;
+  }
+
+  .header-glass .flex.items-center.gap-3.group {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .header-glass .flex.items-center.gap-3.group > div:last-child {
+    min-width: 0;
+  }
+
+  .header-glass .flex.items-center.gap-3.group span:last-child {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header-glass .flex.items-center.gap-3.sm\:gap-4 {
+    gap: 0.25rem;
+  }
+
+  #inicio {
+    min-height: 0;
+  }
+
+  #inicio > .max-w-7xl {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #heroSubtitle {
+    letter-spacing: 0.08em;
+  }
+
+  #heroTagline {
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+  }
+
+  #heroImage {
+    max-height: 12rem;
+  }
+
+  #categorias .grid,
+  #productsGrid {
+    min-width: 0;
+  }
+
+  .cat-card,
+  .prod-card {
+    min-width: 0;
+  }
+
+  .cat-pill {
+    gap: 0.2rem;
+  }
+
+  .cat-pill > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .prod-title {
+    overflow-wrap: anywhere;
+  }
+
+  #ubicacion .space-y-2 > div {
+    align-items: flex-start;
+  }
+
+  #ubicacion .space-y-2 > div > span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  #productModal,
+  #searchModal {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  #productModal > div,
+  #searchModal > div {
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+}
+
+@supports (height: 100dvh) {
+  @media (max-width: 639px) {
+    #productModal > div,
+    #searchModal > div {
+      max-height: calc(100dvh - 2rem);
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .header-glass .flex.items-center.gap-3.group span:first-child {
+    font-size: 1.05rem;
+  }
+
+  .header-glass .flex.items-center.gap-3.group span:last-child {
+    font-size: 0.46rem;
+  }
+
+  .mobile-bottom-item {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 0.6rem;
+  }
 }
