@@ -16,6 +16,9 @@
   --color-text-light: #FFFFFF;
   --font-main: 'Montserrat', sans-serif;
   --font-script: 'Caveat', 'Yellowtail', cursive;
+  html {
+  color-scheme: dark;
+}
 }
 
 * {
