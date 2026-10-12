@@ -176,8 +176,8 @@
           </div>
 
           <!-- Imagen del Calzado en el Hero -->
-          <div class="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md mx-auto">
-            <img src="assets/images/hero-sneakers.jpg" alt="Tenis Gladiador" class="w-full rounded-2xl shadow-2xl filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)] border border-white/5 object-cover">
+          <div class="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-md h-52 sm:h-64 lg:h-72 mx-auto">
+            <img id="heroImage" src="assets/images/hero-sneakers.jpg" alt="Tenis Gladiador" class="w-full h-full rounded-2xl shadow-2xl filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)] border border-white/5 object-contain">
           </div>
 
         </div>
@@ -215,7 +215,7 @@
         <!-- Categoría 1: Tenis -->
         <div class="cat-card group" data-cat="Tenis">
           <div class="cat-img-wrapper">
-            <img src="assets/images/cat-tenis.png" alt="Tenis" class="cat-img">
+            <img src="assets/images/prod-tenis-negro-azul.png" alt="Tenis deportivo negro con detalles azules" class="cat-img">
           </div>
           <div class="cat-pill">
             <span>Tenis</span>
@@ -254,7 +254,7 @@
         <!-- Categoría 4: Casuales -->
         <div class="cat-card group" data-cat="Casuales">
           <div class="cat-img-wrapper">
-            <img src="assets/images/cat-casuales.png" alt="Casuales" class="cat-img">
+            <img src="assets/images/prod-tenis-casual-negro-cordones.png" alt="Tenis casual negro con cordones" class="cat-img">
           </div>
           <div class="cat-pill">
             <span>Casuales</span>
@@ -576,9 +576,9 @@
       <div class="p-5 sm:p-6 space-y-4">
         
         <!-- Imagen -->
-        <div class="w-full h-48 bg-[#222222] rounded-xl flex items-center justify-center p-4">
+        <button id="modalImageTrigger" type="button" class="modal-image-trigger w-full h-48 bg-[#222222] rounded-xl flex items-center justify-center p-4" aria-label="Ampliar imagen del calzado">
           <img id="modalImg" src="" alt="Calzado" class="max-h-full max-w-full object-contain filter drop-shadow-xl">
-        </div>
+        </button>
 
         <!-- Info y Precio -->
         <div class="flex items-center justify-between">
@@ -624,6 +624,13 @@
       </div>
 
     </div>
+  </div>
+
+  <div id="imageZoomModal" class="image-zoom-overlay hidden" role="dialog" aria-modal="true" aria-label="Imagen ampliada del calzado">
+    <button id="closeImageZoomBtn" type="button" class="image-zoom-close" aria-label="Cerrar imagen ampliada">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="imageZoomImg" src="" alt="" class="image-zoom-img">
   </div>
 
 

@@ -5,7 +5,7 @@
 
 // Teléfono de WhatsApp de la tienda (Oficial Gladiador: +57 324 287 9256)
 const WHATSAPP_STORE_PHONE = "573242879256"; 
-const ASSET_VERSION = "20261009-1";
+const ASSET_VERSION = "20261011-4";
 
 function versionedAssetUrl(path) {
   return `${path}?v=${ASSET_VERSION}`;
@@ -14,15 +14,92 @@ function versionedAssetUrl(path) {
 // Base de datos de productos destacados
 const PRODUCTS_DATA = [
   {
-    id: 1,
-    name: "Tenis Deportivo",
+    id: 16,
+    name: "Tenis Blanco con Negro",
     category: "Tenis",
-    price: 180000,
-    priceFormatted: "$ 180.000",
-    image: "assets/images/prod-tenis-deportivo.png",
-    description: "Diseño ergonómico y ultraligero con suela amortiguada de alto rendimiento. Perfecto para running, entrenamiento diario o un estilo urbano activo.",
-    sizes: [37, 38, 39, 40, 41, 42],
-    colors: ["Negro / Blanco", "Negro / Dorado"]
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-blanco-negro.png",
+    description: "Tenis blanco con detalles negros y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Blanco / Negro"]
+  },
+  {
+    id: 17,
+    name: "Tenis Beige con Verde y Rojo",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-beige-verde-rojo.png",
+    description: "Tenis beige con detalles verdes y rojos. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Beige / Verde / Rojo"]
+  },
+  {
+    id: 18,
+    name: "Tenis Café Geométrico",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-cafe-geometrico.png",
+    description: "Tenis café con diseño geométrico y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Café"]
+  },
+  {
+    id: 19,
+    name: "Tenis Gris con Negro",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-gris-negro.png",
+    description: "Tenis gris con detalles negros y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Gris / Negro"]
+  },
+  {
+    id: 20,
+    name: "Tenis Blanco con Velcro",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-blanco-velcro.png",
+    description: "Tenis blanco con detalles negros y cierre de velcro. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Blanco / Negro"]
+  },
+  {
+    id: 21,
+    name: "Tenis Deportivo Negro con Azul",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-negro-azul.png",
+    description: "Tenis deportivo negro con detalles azules. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Negro / Azul"]
+  },
+  {
+    id: 22,
+    name: "Tenis Blanco con Gris",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-blanco-gris.png",
+    description: "Tenis blanco con detalles grises y negros. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Blanco / Gris / Negro"]
+  },
+  {
+    id: 23,
+    name: "Tenis Deportivo Negro con Rosa",
+    category: "Tenis",
+    price: 0,
+    priceFormatted: "Consultar precio",
+    image: "assets/images/prod-tenis-negro-rosa.png",
+    description: "Tenis deportivo negro con detalles rosados. Consulta por WhatsApp el precio y las tallas disponibles.",
+    sizes: [35, 36, 37, 38, 39, 40, 41],
+    colors: ["Negro / Rosa"]
   },
   {
     id: 2,
@@ -131,7 +208,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-casual-negro-cordones.png",
     description: "Tenis casual negro con cordones y acabado clásico. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [36, 37, 38, 39, 40, 41, 42],
+    sizes: [35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro"]
   },
   {
@@ -142,7 +219,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-casual-negro-urbano.png",
     description: "Tenis casual negro de estilo urbano con cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [36, 37, 38, 39, 40, 41, 42],
+    sizes: [35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro"]
   },
   {
@@ -165,7 +242,7 @@ const HERO_SLIDES = [
     subtitle: "PASO A PASO, CON ACTITUD",
     desc: "Los mejores zapatos para cada estilo, cada camino y cada aventura.",
     tagline: "Más que zapatos, es tu estilo de vida",
-    image: "assets/images/hero-sneakers.jpg",
+    image: "assets/images/hero-gladiador.png",
     cta: "Explorar Colección"
   },
   {
@@ -173,7 +250,7 @@ const HERO_SLIDES = [
     subtitle: "LISTOS PARA CADA DÍA",
     desc: "Calzado clásico para acompañar el uniforme y la jornada escolar.",
     tagline: "Comodidad para aprender y avanzar",
-    image: "assets/images/prod-zapato-formal.png",
+    image: "assets/images/hero-colegiales.png",
     cta: "Ver Colegiales"
   },
   {
@@ -181,7 +258,7 @@ const HERO_SLIDES = [
     subtitle: "LISTO PARA CADA JUGADA",
     desc: "Calzado deportivo para acompañarte en la cancha con comodidad y estabilidad.",
     tagline: "Domina cada jugada",
-    image: "assets/images/prod-mercurial-dorado-verde.png",
+    image: "assets/images/hero-mercuriales.png",
     cta: "Ver Mercuriales"
   }
 ];
@@ -264,6 +341,8 @@ function initHeroSlider() {
               onclick="goToSlide(${i})" aria-label="Ir a diapositiva ${i + 1}"></button>
     `).join('');
   }
+
+  updateHeroSlide();
 }
 
 window.goToSlide = function(index) {
@@ -277,12 +356,17 @@ function updateHeroSlide() {
   const subEl = document.getElementById('heroSubtitle');
   const descEl = document.getElementById('heroDesc');
   const taglineEl = document.getElementById('heroTagline');
+  const imageEl = document.getElementById('heroImage');
   const dotsContainer = document.getElementById('heroDots');
 
   if (titleEl) titleEl.innerText = slide.title;
   if (subEl) subEl.innerText = slide.subtitle;
   if (descEl) descEl.innerText = slide.desc;
   if (taglineEl) taglineEl.innerText = slide.tagline;
+  if (imageEl) {
+    imageEl.src = versionedAssetUrl(slide.image);
+    imageEl.alt = slide.title;
+  }
 
   if (dotsContainer) {
     const dots = dotsContainer.querySelectorAll('button');
@@ -408,6 +492,9 @@ window.resetCategoryFilter = function() {
 function initModalListeners() {
   const modal = document.getElementById('productModal');
   const closeBtn = document.getElementById('closeModalBtn');
+  const imageTrigger = document.getElementById('modalImageTrigger');
+  const imageZoomModal = document.getElementById('imageZoomModal');
+  const closeImageZoomBtn = document.getElementById('closeImageZoomBtn');
 
   if (closeBtn && modal) {
     closeBtn.addEventListener('click', () => closeModal());
@@ -416,10 +503,39 @@ function initModalListeners() {
     });
   }
 
-  // Tecla Escape para cerrar
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      if (imageZoomModal && !imageZoomModal.classList.contains('hidden')) {
+        closeImageZoom();
+      } else {
+        closeModal();
+      }
+    }
   });
+
+  if (imageTrigger) imageTrigger.addEventListener('click', openImageZoom);
+  if (closeImageZoomBtn) closeImageZoomBtn.addEventListener('click', closeImageZoom);
+  if (imageZoomModal) {
+    imageZoomModal.addEventListener('click', (e) => {
+      if (e.target === imageZoomModal) closeImageZoom();
+    });
+  }
+}
+
+function openImageZoom() {
+  const modalImg = document.getElementById('modalImg');
+  const imageZoomModal = document.getElementById('imageZoomModal');
+  const imageZoomImg = document.getElementById('imageZoomImg');
+  if (!modalImg || !imageZoomModal || !imageZoomImg || !modalImg.src) return;
+
+  imageZoomImg.src = modalImg.src;
+  imageZoomImg.alt = modalImg.alt;
+  imageZoomModal.classList.remove('hidden');
+}
+
+function closeImageZoom() {
+  const imageZoomModal = document.getElementById('imageZoomModal');
+  if (imageZoomModal) imageZoomModal.classList.add('hidden');
 }
 
 window.openProductModal = function(id) {
@@ -445,12 +561,12 @@ window.openProductModal = function(id) {
 
   // Renderizar tallas disponibles
   if (sizesContainer) {
-    sizesContainer.innerHTML = prod.sizes.map(size => `
+    sizesContainer.innerHTML = prod.sizes.length > 0 ? prod.sizes.map(size => `
       <button class="size-btn px-3 py-1.5 rounded-lg border text-sm font-semibold transition-all ${size === selectedSize ? 'border-[#F3A812] bg-[#F3A812] text-black' : 'border-gray-600 text-white hover:border-gray-400'}"
               onclick="selectSize(${size}, this)">
         ${size}
       </button>
-    `).join('');
+    `).join('') : '<span class="text-sm text-gray-400">Consulta las tallas disponibles por WhatsApp.</span>';
   }
 
   modal.classList.remove('hidden');
@@ -470,6 +586,7 @@ window.selectSize = function(size, btnElement) {
 };
 
 window.closeModal = function() {
+  closeImageZoom();
   const modal = document.getElementById('productModal');
   if (modal) {
     modal.classList.add('hidden');

@@ -453,6 +453,59 @@ input, select, textarea {
   -webkit-backdrop-filter: blur(8px);
 }
 
+.modal-image-trigger {
+  border: 0;
+  color: inherit;
+  cursor: zoom-in;
+}
+
+.modal-image-trigger:focus-visible,
+.image-zoom-close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.image-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1rem 1rem;
+  background: rgba(0, 0, 0, 0.94);
+  cursor: zoom-out;
+}
+
+.image-zoom-overlay.hidden {
+  display: none;
+}
+
+.image-zoom-img {
+  max-width: min(92vw, 1100px);
+  max-height: 88vh;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.65));
+  cursor: default;
+}
+
+.image-zoom-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 /* Bottom Nav Bar for Mobile Devices */
 .mobile-bottom-nav {
   position: fixed;
