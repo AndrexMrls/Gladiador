@@ -21,7 +21,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-blanco-negro.png",
     description: "Tenis blanco con detalles negros y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Blanco / Negro"]
   },
   {
@@ -32,7 +32,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-beige-verde-rojo.png",
     description: "Tenis beige con detalles verdes y rojos. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Beige / Verde / Rojo"]
   },
   {
@@ -43,7 +43,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-cafe-geometrico.png",
     description: "Tenis café con diseño geométrico y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Café"]
   },
   {
@@ -54,7 +54,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-gris-negro.png",
     description: "Tenis gris con detalles negros y cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Gris / Negro"]
   },
   {
@@ -65,7 +65,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-blanco-velcro.png",
     description: "Tenis blanco con detalles negros y cierre de velcro. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Blanco / Negro"]
   },
   {
@@ -76,7 +76,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-negro-azul.png",
     description: "Tenis deportivo negro con detalles azules. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro / Azul"]
   },
   {
@@ -87,7 +87,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-blanco-gris.png",
     description: "Tenis blanco con detalles grises y negros. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Blanco / Gris / Negro"]
   },
   {
@@ -98,7 +98,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-negro-rosa.png",
     description: "Tenis deportivo negro con detalles rosados. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro / Rosa"]
   },
   {
@@ -109,7 +109,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 80.000",
     image: "assets/images/prod-colegial-azul-cordones.png",
     description: "Zapato colegial azul con cordones blancos, ideal para el uniforme y las actividades de todos los días.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Azul"]
   },
   {
@@ -120,7 +120,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 80.000",
     image: "assets/images/prod-colegial-rojo-hebilla.png",
     description: "Zapato colegial rojo con tira y hebilla. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Rojo"]
   },
   {
@@ -131,7 +131,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 80.000",
     image: "assets/images/prod-colegial-rojo-cordones.png",
     description: "Zapato colegial rojo con cordones blancos. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Rojo"]
   },
   {
@@ -142,7 +142,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 80.000",
     image: "assets/images/prod-colegial-negro-hebilla.png",
     description: "Zapato colegial negro con tira y hebilla. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro"]
   },
   {
@@ -153,7 +153,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 60.000",
     image: "assets/images/prod-mercurial-dorado-verde.png",
     description: "Modelo de fútbol en tonos dorados y verdes. Consulta por WhatsApp las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Dorado / Verde"]
   },
   {
@@ -164,7 +164,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 60.000",
     image: "assets/images/prod-mercurial-azul.png",
     description: "Modelo de fútbol en tonos azules, negros y blancos. Consulta por WhatsApp las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Azul / Negro / Blanco"]
   },
   {
@@ -175,7 +175,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 60.000",
     image: "assets/images/prod-mercurial-negro-azul.png",
     description: "Modelo de fútbol en tonos negros y azules. Consulta por WhatsApp las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro / Azul"]
   },
   {
@@ -186,7 +186,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 60.000",
     image: "assets/images/prod-mercurial-plata-verde.png",
     description: "Modelo de fútbol en tonos plata y verdes. Consulta por WhatsApp las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Plata / Verde"]
   },
   {
@@ -197,7 +197,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "$ 60.000",
     image: "assets/images/prod-mercurial-negro-azul-estrellas.png",
     description: "Modelo de fútbol negro con detalles azules y diseño de estrellas. Consulta por WhatsApp las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro / Azul / Blanco"]
   },
   {
@@ -208,7 +208,7 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-casual-negro-cordones.png",
     description: "Tenis casual negro con cordones y acabado clásico. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro"]
   },
   {
@@ -219,20 +219,9 @@ const PRODUCTS_DATA = [
     priceFormatted: "Consultar precio",
     image: "assets/images/prod-tenis-casual-negro-urbano.png",
     description: "Tenis casual negro de estilo urbano con cordones. Consulta por WhatsApp el precio y las tallas disponibles.",
-    sizes: [35, 36, 37, 38, 39, 40, 41],
+    sizes: [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     colors: ["Negro"]
   },
-  {
-    id: 6,
-    name: "Tenis Infantil",
-    category: "Niños",
-    price: 120000,
-    priceFormatted: "$ 120.000",
-    image: "assets/images/prod-tenis-infantil.png",
-    description: "Calzado infantil resistente a alto impacto con materiales transpirables y suela flexible. Diseñado para resistir juegos, saltos y aventuras con total seguridad.",
-    sizes: [28, 29, 30, 31, 32, 33, 34],
-    colors: ["Negro / Amarillo Gladiador", "Azul / Rojo"]
-  }
 ];
 
 // Slides del Hero
@@ -276,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategoryFilters();
   initModalListeners();
   initSearch();
-  initNewsletter();
+  initWhatsAppOffers();
   initMobileMenu();
   initMobileBottomNav();
   updateWishlistCount();
@@ -714,23 +703,31 @@ function renderSearchResults(results) {
   `).join('');
 }
 
-/* ==========================================================================
-   Suscripción y Notificaciones Toast
-   ========================================================================== */
-function initNewsletter() {
-  const form = document.getElementById('newsletterForm');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = form.querySelector('input[type="email"]');
-      if (input && input.value) {
-        showToast("¡Gracias por suscribirte! Recibirás nuestras promociones exclusivas.");
-        input.value = '';
-      }
-    });
-  }
+function initWhatsAppOffers() {
+  const form = document.getElementById('whatsappOffersForm');
+  const phoneInput = document.getElementById('whatsappOffersPhone');
+
+  if (!form || !phoneInput) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const phone = phoneInput.value.trim();
+
+    const normalizedPhone = phone.replace(/\D/g, '');
+    if (normalizedPhone.length < 10 || normalizedPhone.length > 15) {
+      showToast('Ingresa un número de WhatsApp válido.');
+      return;
+    }
+
+    const message = `Hola, quiero recibir las ofertas y promociones de Gladiador. Mi número de WhatsApp es: ${phone}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_STORE_PHONE}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  });
 }
 
+/* ==========================================================================
+   Notificaciones Toast
+   ========================================================================== */
 function showToast(message) {
   let toast = document.getElementById('toastNotification');
   if (!toast) {

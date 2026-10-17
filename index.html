@@ -7,7 +7,7 @@
   <title>Gladiador | Paso a Paso, Con Actitud - Tienda de Calzado en Chinú, Córdoba</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="En Gladiador ofrecemos calzado de alta calidad, comodidad y estilo en Chinú, Córdoba. Tenis, mercuriales, colegiales, casuales y calzado infantil.">
+  <meta name="description" content="En Gladiador ofrecemos calzado de alta calidad, comodidad y estilo en Chinú, Córdoba. Tenis, mercuriales, colegiales y casuales.">
   <meta name="keywords" content="Gladiador, Zapatos Chinú Córdoba, Calzado Chinú, Tenis, Mercuriales, Colegiales">
   <link rel="icon" type="image/svg+xml" href="assets/images/helmet-icon.svg">
 
@@ -41,7 +41,7 @@
     }
   </script>
 
-  <!-- Custom Stylesheet -->
+  <!-- Custom Stylesheet -->a
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#0D0D0D] text-white antialiased">
@@ -210,8 +210,8 @@
         </p>
       </div>
 
-      <!-- Cuadrícula de 5 Categorías -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+      <!-- Cuadrícula de Categorías -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         
         <!-- Categoría 1: Tenis -->
         <div class="cat-card group" data-cat="Tenis">
@@ -259,19 +259,6 @@
           </div>
           <div class="cat-pill">
             <span>Casuales</span>
-            <div class="cat-arrow-circle">
-              <i class="fas fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categoría 5: Niños -->
-        <div class="cat-card group" data-cat="Niños">
-          <div class="cat-img-wrapper">
-            <img src="assets/images/cat-ninos.png" alt="Niños" class="cat-img">
-          </div>
-          <div class="cat-pill">
-            <span>Niños</span>
             <div class="cat-arrow-circle">
               <i class="fas fa-chevron-right"></i>
             </div>
@@ -528,13 +515,28 @@
           </div>
         </div>
 
-        <!-- Formulario Newsletter -->
-        <div class="flex flex-col items-start md:items-end w-full">
-          <span class="text-xs text-gray-400 font-semibold mb-3">Suscríbete y recibe nuestras ofertas</span>
-          <form id="newsletterForm" class="flex items-center w-full max-w-xs relative">
-            <input type="email" required placeholder="Tu correo electrónico" class="w-full bg-white text-black placeholder-gray-500 text-xs px-4 py-2.5 rounded-full pr-10 focus:outline-none focus:ring-2 focus:ring-[#F3A812]">
-            <button type="submit" class="absolute right-1 w-8 h-8 rounded-full bg-[#F3A812] text-black flex items-center justify-center hover:bg-yellow-400 transition-colors" title="Suscribirme">
-              <i class="fas fa-paper-plane text-xs"></i>
+        <!-- Ofertas por WhatsApp -->
+        <div class="flex w-full flex-col items-start">
+          <span class="text-xs text-gray-400 font-semibold mb-3">Recibe nuestras ofertas por WhatsApp</span>
+          <form id="whatsappOffersForm" class="flex w-full max-w-xs items-center gap-2">
+            <label for="whatsappOffersPhone" class="sr-only">Tu número de WhatsApp</label>
+            <input
+              id="whatsappOffersPhone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              required
+              placeholder="Tu número de WhatsApp"
+              class="min-w-0 flex-1 rounded-full bg-white px-4 py-2.5 text-xs text-black placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#F3A812]"
+            >
+            <button
+              type="submit"
+              aria-label="Solicitar ofertas por WhatsApp"
+              title="Solicitar ofertas por WhatsApp"
+              class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F3A812] text-black transition-colors hover:bg-yellow-400"
+            >
+              <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
             </button>
           </form>
         </div>
